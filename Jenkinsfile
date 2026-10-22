@@ -31,10 +31,10 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-    steps {
-        bat '"C:\\Users\\Akhil.Pradeep\\AppData\\Local\\Programs\\Docker\\Docker\\resources\\bin\\docker.exe" --version'
-        bat '"C:\\Users\\Akhil.Pradeep\\AppData\\Local\\Programs\\Docker\\Docker\\resources\\bin\\docker.exe" build -t jenkins-devops-app .'
+    stage('Build Docker Image') {
+        steps {
+            bat '"C:\\Users\\Akhil.Pradeep\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" --version'
+            bat '"C:\\Users\\Akhil.Pradeep\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" build -t jenkins-devops-app .'
     }
 }
         
