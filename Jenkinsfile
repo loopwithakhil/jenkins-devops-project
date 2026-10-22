@@ -32,10 +32,12 @@ pipeline {
         }
 
         stage('Build Docker Image') {
-            steps {
-                bat 'docker build -t jenkins-devops-app .'
-            }
-        }
+    steps {
+        bat '"C:\\Users\\Akhil.Pradeep\\AppData\\Local\\Programs\\Docker\\Docker\\resources\\bin\\docker.exe" --version'
+        bat '"C:\\Users\\Akhil.Pradeep\\AppData\\Local\\Programs\\Docker\\Docker\\resources\\bin\\docker.exe" build -t jenkins-devops-app .'
+    }
+}
+        
 
         stage('Pipeline Complete') {
             steps {
