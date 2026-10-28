@@ -3,3 +3,9 @@ pytest>=8.4.2
 pytest-cov
 ruff
 pip-audit
+msgpack>=1.2.3
+setuptools>=84.1.0
+urllib3>=2.8.0
+msgpack>=1.2.3
+setuptools>=84.1.0
+urllib3>=2.8.0
