@@ -3,7 +3,7 @@ agent any
 
 
 environment {
-    PYTHON = 'C:/Users/Akhil.Pradeep/AppData/Local/Programs/Python/Python39/python.exe'
+    PYTHON = 'C:/Users/Akhil.Pradeep/AppData/Local/Programs/Python/Python312/python.exe'
     DOCKER = 'C:\\Users\\Akhil.Pradeep\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe'
     IMAGE_NAME = 'jenkins-devops-app'
 }
