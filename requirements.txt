@@ -1,5 +1,5 @@
 Flask
-pytest
+pytest>=8.4.2
 pytest-cov
 ruff
 pip-audit
