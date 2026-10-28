@@ -17,3 +17,22 @@ def test_health_endpoint():
 
     assert response.status_code == 200
     assert response.json["status"] == "healthy"
+
+
+def test_readiness_endpoint():
+    client = app.test_client()
+
+    response = client.get("/ready")
+
+    assert response.status_code == 200
+    assert response.json["status"] == "ready"
+
+
+def test_version_endpoint():
+    client = app.test_client()
+
+    response = client.get("/version")
+
+    assert response.status_code == 200
+    assert response.json["application"] == "DevOps CI/CD Demo"
+    assert response.json["version"] == "1.0.0"
