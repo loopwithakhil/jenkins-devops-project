@@ -53,6 +53,19 @@ stages {
         }
     }
 
+    stage('Deploy Docker Container') {
+    steps {
+        script {
+            bat '''
+                "%DOCKER%" rm -f jenkins-devops-app 2>NUL
+                if errorlevel 1 exit /b 1
+                "%DOCKER%" run -d --name jenkins-devops-app -p 5000:5000 --restart unless-stopped %IMAGE_NAME%
+                if errorlevel 1 exit /b 1
+            '''
+        }
+    }
+}
+
     stage('Pipeline Complete') {
         steps {
             echo 'CI pipeline completed successfully!'
