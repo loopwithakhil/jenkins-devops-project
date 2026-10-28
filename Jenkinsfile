@@ -65,6 +65,19 @@ stages {
         }
     }
 }
+    groovy
+stage('Trivy Security Scan') {
+    steps {
+        script {
+            bat '''
+                echo Running Trivy vulnerability scan...
+                "C:\\trivy\\trivy.exe" image --scanners vuln --severity HIGH,CRITICAL --exit-code 0 --no-progress %IMAGE_NAME%
+            '''
+        }
+    }
+}
+
+
 
     stage('Pipeline Complete') {
         steps {
