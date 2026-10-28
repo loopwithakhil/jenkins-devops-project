@@ -65,7 +65,7 @@ stages {
         }
     }
 }
-    groovy
+
 stage('Trivy Security Scan') {
     steps {
         script {
